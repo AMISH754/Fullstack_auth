@@ -32,7 +32,7 @@ export async function POST(request:NextRequest){
 
        }
        //create Token
-       const token= await jwt.sign(tokenData,process.env.TOKEN_SECRET!,{expiresIn:"1d"});
+       const token=  jwt.sign(tokenData,process.env.TOKEN_SECRET!,{expiresIn:"1d"});
         
        //set token to user cookie
        const response=NextResponse.json({
