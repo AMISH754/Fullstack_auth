@@ -32,7 +32,7 @@ export default  function ProfilePage(){
             <h1>Profile</h1>
             <hr/>
             <p>Profilepage</p>
-            <h2 className="bg-blue-400 rounded-md p-4">{data==="nothihng"?"Nothing":<Link href={`/profile/${data}`}>{data}</Link>}</h2>
+            <h2 className="bg-blue-400 rounded-md p-4">{data==="nothing"?"Nothing":<Link href={`/profile/${data}`}>{data}</Link>}</h2>
             <hr/>
             <button onClick={logout} 
             className="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-red-400 focus:ring-offset-2">

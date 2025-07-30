@@ -30,6 +30,7 @@ const mailOptions={
 
 }
 const mailresponse=await transport.sendMail(mailOptions);
+console.log(" Mail response is ",mailresponse);
 return mailresponse; 
 }
 catch(error:any){

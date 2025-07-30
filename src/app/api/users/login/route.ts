@@ -40,7 +40,8 @@ export async function POST(request:NextRequest){
         success:true
        });
        response.cookies.set("token",token,{
-        httpOnly:true
+        httpOnly:true  //- This flag makes the cookie inaccessible to JavaScript on the client side.
+
        });
        return response;
 

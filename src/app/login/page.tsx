@@ -17,6 +17,8 @@ const [buttonDisabled,setButtonDisabled]=useState(false);
 const [loading,setLoading]=useState(false);
 const router = useRouter();
 
+
+
  const onLogin=async()=>{
      try{
         setLoading(true);
@@ -63,7 +65,8 @@ const router = useRouter();
             <button
             onClick={onLogin}
             className="p-2 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-gray-600">{buttonDisabled?"No Login":"Login Here"}</button>
-            <Link href="/signup">Visit Signup page</Link>
+            <Link className="py-2 hover:text-blue-800" href="/forgotpassword">Forgot Password</Link> 
+            <Link className="hover:text-blue-800" href="/signup">Visit Signup page</Link>
 
         </div>
     )
