@@ -43,6 +43,7 @@ export async function POST(request:NextRequest){
         httpOnly:true  //- This flag makes the cookie inaccessible to JavaScript on the client side.
 
        });
+       console.log("Response is",response);
        return response;
 
     }catch(error:any){

@@ -5,12 +5,14 @@ import React ,{useState,useEffect} from "react";
 
 export default function VerifyEmailPage(){
     const [token,setToken]=useState("");
+    const [reset,setReset]=useState(false);
     const [verified,setVerified]=useState(false);
-    const [error,setError]=useState(false);
+    const [error,setError]=useState(false); 
     const verifyUserEmail=async()=>{
         try{
             await axios.post('/api/users/verifyemail',{token});
             setVerified(true);
+            setReset(true);
 
         }catch(error:any){
             setError(true);
@@ -43,12 +45,18 @@ export default function VerifyEmailPage(){
                     </Link>
                 </div>
             )}
+             {reset &&(
+                <div>
+                    Confirmed Password
+                </div>    
+            )}
             {error && (
                 <div>
                     <h2 className="text-2xl bg-red-500 text-black">Error</h2>
                     
                 </div>
             )}
+           
         </div>
     );
 }
